@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Game</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+            integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+            integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <link rel="stylesheet" href="css/index.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    </head>
+    <body
+        style="background-image: url('img/back_profile_u.jpg'); background-image: linear-gradient(to bottom, rgba(0,0,0,.5), rgba(0,0,0,.3)), url('img/back_profile_u.jpg')">
+        <div class="wrapper">
+            <nav id="navbar" class="navbar navbar-expand-md navbar-dark">
+                <a id="sidebarCollapse" class="nav-header style-white" style="cursor: pointer">
+                    <svg class="ham ham2" viewBox="0 0 100 100" width="40" onclick="this.classList.toggle('active')">
+                        <path class="line top"
+                            d="m 70,33 h -40 c -6.5909,0 -7.763966,-4.501509 -7.763966,-7.511428 0,-4.721448 3.376452,-9.583771 13.876919,-9.583771 14.786182,0 11.409257,14.896182 9.596449,21.970818 -1.812808,7.074636 -15.709402,12.124381 -15.709402,12.124381" />
+                        <path class="line middle" d="m 30,50 h 40" />
+                        <path class="line bottom"
+                            d="m 70,67 h -40 c -6.5909,0 -7.763966,4.501509 -7.763966,7.511428 0,4.721448 3.376452,9.583771 13.876919,9.583771 14.786182,0 11.409257,-14.896182 9.596449,-21.970818 -1.812808,-7.074636 -15.709402,-12.124381 -15.709402,-12.124381" />
+                        </svg>
+                </a>
+                <div class="navbar-collapse collapse" id="collapsingNavbar">
+                    <ul class="navbar-nav"></ul>
+                </div>
+            </nav>
+            <nav id="sidebar">
+                <div class="sidebar-header">
+                    <div class="nav-spacing"></div>
+                    <a class="nav-link-a" href="/">
+                        <h3>Profile</h3>
+                    </a>
+                    <a class="nav-link-a" href="/campaigns.html">
+                        <h3>Campaigns</h3>
+                    </a>
+                    <a class="nav-link-a" href="/friend_search.html">
+                        <h3>Friends</h3>
+                    </a>
+                </div>
+            </nav>
+        </div>
+        <section class="profile-background-u" style="min-height: inherit">
+            <div id="content" class="nav-spacing">
+                <div class="profile-edit-modal">
+                    <h1 style="text-align: center;" class="profile-h1 col-md-12">Username</h1>
+                    <div class="row">
+                        <div class="col-md-4 border-white">
+                            <img src="img/user_placeholder.jpg" class="style-white"
+                                style="width:100%; margin: 20px; border: 1px solid #fff;">
+                        </div>
+                        <div class="col-md-8">
+                            <h1 class="style-white" style="padding: 20px;">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam in vehicula erat. Suspendisse
+                                malesuada felis tellus, vel
+                                mattis orci posuere sed. Sed nec dui placerat, euismod velit eu, sagittis sapien. In iaculis
+                                eleifend felis, convallis
+                                fermentum purus. Vivamus iaculis semper velit mollis vulputate. Nam suscipit mi a orci
+                                mattis, vitae gravida eros
+                                vestibulum. Vivamus a sodales lacus, eu tincidunt massa. Nulla id pretium mauris.
+                            </h1>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                    </div>
+                    <div class="row profile-campaings-box">
+                        <h1 class="profile-h1 col-md-12">Campaigns</h1>
+                        <div class="col-md-12 flex-row">
+                            <div class="profile-create-card">
+                                <a href="#" class="style-white" style="font-size: 1em">
+                                    <img src="img/placeholder.jpg" style="width: 100%;">
+                                    <h1 class="profile-overlay">temp campaign</h1>
+                                </a>
+                            </div>
+                            <div class="profile-create-card">
+                                <a href="#" class="style-white" style="font-size: 1em">
+                                    <img src="img/placeholder.jpg" style="width: 100%;">
+                                    <h1 class="profile-overlay">temp campaign</h1>
+                                </a>
+                            </div>
+                            <div class="profile-create-card">
+                                <a href="#" class="style-white" style="font-size: 1em">
+                                    <img src="img/placeholder.jpg" style="width: 100%;">
+                                    <h1 class="profile-overlay">temp campaign</h1>
+                                </a>
+                            </div>
+                            <div class="profile-create-card">
+                                <a href="#" class="style-white" style="font-size: 1em">
+                                    <img src="img/placeholder.jpg" style="width: 100%;">
+                                    <h1 class="profile-overlay">temp campaign</h1>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <script type="text/javascript">
+            $('#sidebar, #content').toggleClass('active');
+            $(document).ready(function () {
+                $('#sidebarCollapse').on('click', function () {
+                    $('#sidebar, #content').toggleClass('active');
+                    $('.collapse.in').toggleClass('in');
+                    $('a[aria-expanded=true]').attr('aria-expanded', 'false');
+                });
+            });
+        </script>
+    </body>
+</html>
